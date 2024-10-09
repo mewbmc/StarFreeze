@@ -1,0 +1,32 @@
+name: FreezePlugin
+version: 1.0
+main: io.starseed.freezeplugin.FreezePlugin
+api-version: 1.21
+description: A comprehensive freeze plugin for moderation
+author: MewbMC
+
+commands:
+  freeze:
+    description: Freeze a player
+    usage: /<command> <player>
+    permission: freeze.use
+  unfreeze:
+    description: Unfreeze a player
+    usage: /<command> <player>
+    permission: freeze.use
+  freezehold:
+    description: Toggle freeze hold status for a player
+    usage: /<command> <player>
+    permission: freeze.use
+  freezeall:
+    description: Freeze all players
+    usage: /<command>
+    permission: freeze.use
+
+permissions:
+  freeze.use:
+    description: Allows use of freeze commands
+    default: op
+  freeze.bypass:
+    description: Allows bypassing of freeze restrictions
+    default: op

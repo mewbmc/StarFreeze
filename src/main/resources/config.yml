@@ -1,0 +1,60 @@
+# Plugin Configuration
+
+# Freeze Restrictions
+prevent-interactions: true
+prevent-item-drops: true
+prevent-inventory-usage: true
+prevent-block-break: true
+prevent-block-place: true
+prevent-entity-damage: true
+
+# Messages
+freeze-message: "&c&lYou have been frozen by %staff%!"
+unfreeze-message: "&a&lYou have been unfrozen!"
+freeze-hold-enabled: "&e&lFreeze hold enabled for %player%"
+freeze-hold-disabled: "&e&lFreeze hold disabled for %player%"
+no-permission: "&cYou don't have permission to use this command!"
+player-not-found: "&cPlayer not found!"
+player-not-frozen: "&cThis player is not frozen!"
+console-deny: "&cThis command can only be executed by players!"
+
+# Command Usage Messages
+freeze-usage: "&cUsage: /freeze <player>"
+unfreeze-usage: "&cUsage: /unfreeze <player>"
+freezehold-usage: "&cUsage: /freezehold <player>"
+
+# Title Messages
+freeze-title: "&c&lYOU ARE FROZEN"
+freeze-subtitle: "&7Please wait for staff assistance"
+
+# ActionBar Messages
+enable-actionbar: true
+actionbar-message: "&c&lYou are currently frozen!"
+actionbar-interval: 20 # ticks (20 ticks = 1 second)
+
+# Particle Effects
+enable-particle-effect: true
+particle-type: SNOWFLAKE
+particle-count: 20
+particle-interval: 10 # ticks
+
+# Frozen GUI
+enable-frozen-gui: false
+frozen-gui-title: "&c&lYou are frozen!"
+
+
+# Sounds
+enable-sounds: true
+freeze-sound: "BLOCK_ANVIL_LAND"
+unfreeze-sound: "ENTITY_PLAYER_LEVELUP"
+
+# Freeze Duration (in seconds) before executing commands
+freeze-duration: 300 # 5 minutes
+
+# Commands to execute when a player is frozen for the specified duration
+freeze-duration-commands:
+  - "kick %player% You have been automatically kicked for being frozen too long"
+
+# Commands to execute when a player logs out while frozen
+logout-while-frozen-commands:
+  - "ban %player% Logged out while frozen"
